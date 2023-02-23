@@ -1,0 +1,253 @@
+# # # Lists # # #
+
+# Constructors - list() or []
+# sports = ["Baseball", "Football", "Soccer"]
+
+# mylist = ["baseball", True, None, 4.5, 4, ["hello"]]
+# print(type(mylist))
+# print(mylist)
+# Type
+# print(type(sports))
+
+# Ordered - yes, can index into it
+# print(sports[0])
+# print(sports[-1])
+# print(sports[2])
+# print(sports[4])  # out of range!
+# print(sports[:2])
+
+# Mutable - yes
+
+# Allows Duplicates - Yes
+# sports = ["Baseball", "Football", "Soccer", "Baseball"]
+# print(sports)
+
+# Num items in the collection - len()
+# print(len(sports))
+
+# Adding items - .extend(list) .append(item) .insert(index, item) index +
+# sports = ["Baseball", "Football", "Soccer"]
+# more_sports = ["Tennis", "Rugby"]
+# sports.extend(more_sports)
+# print(sports)
+
+# sports.append("Tennis")
+# print(sports)
+
+# sports.insert(2, "Tennis")
+# print(sports)
+
+# sports[0] = "Tennis"
+# print(sports)
+
+# sports + more_sports
+# print(sports)
+# newlist = sports + more_sports
+# print(newlist)
+
+# Removing items - .pop() .pop(index) .remove(item)
+# sports = ["Baseball", "Football", "Soccer"]
+
+# sports.pop()
+# print(sports)
+#
+# sports.pop(0)
+# print(sports)
+#
+# sports.pop(2) # out of range!
+
+# sports.remove("Baseball")
+# print(sports)
+#
+# sports.remove("baseball") # error! baseball is not in list
+
+
+# Search - .index(item) count(item) index if item in list
+# sports = ["Soccer", "Baseball", "Football", "Soccer"]
+
+# print(sports.index("Football"))
+
+# print(sports.count("Soccer"))
+
+# print("Baseball" in sports) # True
+# print("baseball" in sports) # False
+#
+# if "Baseball" in sports:
+#     bb_index = sports.index("Baseball")
+#     sports.pop(bb_index)
+# print(sports)
+
+# Sort - .sort(reverse=True/False)
+# sports.sort()
+# print(sports)
+#
+# sports.sort(reverse=True)
+# print(sports)
+
+# number_list = [2, 3, 5, 7, 2, 34, 4]
+# number_list.sort()
+# print(number_list)
+# number_list.sort(reverse=True)
+# print(number_list)
+
+# random_list = [2, 3, 5, 2, "hello", 4]
+# random_list.sort()
+
+
+
+
+# # # Dictionaries # # #
+
+# Constructors - dict() or {}
+# mydict = {"name": "Charcey"}
+# print(mydict)
+
+# Type
+# print(type(mydict))
+
+# Ordered - not for indexing, but in Python 3.7+ the order will remain constant
+
+# Mutable - keys are not, items might be
+
+# Allows Duplicates - No duplicate keys
+
+# Num key/value pairs in the collection - len()
+# mydict = {"name": "Charcey", "job": "instructor"}
+# print(len(mydict))
+
+# Adding k/v pairs - dict[key] = value
+# mydict["last_name"] = "Petersen"
+# print(mydict)
+
+# mydict["name"] = "Sara"
+# print(mydict)
+
+# mydict["job"] = ["instructor"]
+# print(mydict)
+#
+# mydict["job"].append("swe")
+# print(mydict)
+
+# Removing k/v pairs - del dict[key]
+mydict = {"name": "Charcey", "job": "instructor"}
+
+# del mydict["name"]
+# del mydict["job"]
+# print(mydict)
+# mydict["name"] = "Charcey"
+# print(mydict)
+# del mydict["hello"]
+
+# Search - if key in dict keys() values() items()
+# print(mydict["job"])
+
+# print(mydict.keys())
+# print(mydict.values())
+# print(mydict.items())
+
+# Sort - no
+
+
+
+# # # Set # # #
+
+# Constructors - set() or {}
+# sports = {"Baseball", "Football", "Soccer"}
+# print(sports)
+# Type
+# print(type(sports))
+
+# Ordered - no
+# sports[0] # will error
+
+# Mutable - yes, can remove and add items but not change existing
+
+# Allows Duplicates - no
+# sports = {"Baseball", "Football", "Soccer", "Football"}
+# print(sports)
+
+# Num items in the collection - len()
+# print(len(sports))
+
+# Adding items - .add(item)
+# sports = {"Baseball", "Football", "Soccer", "Football"}
+#
+# sports.add("Tennis")
+# # print(sports)
+#
+# sports.add("Football")
+# # print(sports)
+
+# Removing items - .remove(item)
+# sports.remove("Baseball")
+# print(sports)
+#
+# sports.remove("Rugby") # error not in set
+
+
+# Search - if item in set
+# sports = {"Baseball", "Football", "Soccer", "Football"}
+
+# print("Baseball" in sports)  # True
+# print("Rugby" in sports)  # False
+
+# Sort - no
+
+# sports = {"Baseball", "Football", "Soccer", "Volleyball"}
+# more_sports = {"Football", "Rugby", "Volleyball"}
+# Union - returns a new set with items from both set1 and set2 - |
+# print(sports.union(more_sports))
+# print(sports | more_sports)
+
+# Intersection - returns a new set with items common in set1 and set2 - &
+# print(sports & more_sports)
+
+# Difference - returns a new set with items in set1 but not set2 - -
+# print(sports - more_sports)
+# print(more_sports - sports)
+
+# Symmetric Difference - returns a new set with item from either set1 or set2 but not both - ^
+# print(sports ^ more_sports)
+
+
+
+
+
+
+# # # Tuple # # #
+
+# Constructors - tuple() or ()
+# sports = ("Baseball", "Soccer", "Football")
+# print(sports)
+#
+# # Type
+# print(type(sports))
+
+# Ordered - yes, can index into it
+# print(sports[0])
+# print(sports[-1])
+# print(sports[5])  # will error!
+
+# Mutable - no
+# sports[0] = "Rugby" # this does NOT work!!
+
+# Allows Duplicates - yes
+sports = ("Baseball", "Soccer", "Football", "Football")
+# print(sports)
+#
+# # Num items in the collection - len()
+# print(len(sports))
+
+# Adding items - cannot do it natively but there are options!
+
+# Removing items - cannot do it natively but there are options!
+
+# Search - index .index(item) if item in tuple count
+# print(sports[0])
+#
+# print(sports.index("Baseball"))
+#
+# print(sports.count("Baseball"))
+
+print("Baseball" in sports)  # True
+print(4 in sports)  # False
